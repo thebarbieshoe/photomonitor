@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="shortcut icon" href="http://holyspirit-indy.org/sites/default/files/holyspirit_favicon.ico" type="image/vnd.microsoft.icon" />
+		<link href="https://fonts.googleapis.com/css?family=Merriweather|Poppins" rel="stylesheet">
+		<!--
+		 462 is number of seconds that the video lasts/page will refresh every 7:42 minutes
+		-->
+		<meta http-equiv="refresh" content="462">
+		<!-- responsive design -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- end responsive design
+		 -->
+		<link href="/churchmonitor03/style.css" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:800" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<title>Welcome to Holy Spirit Catholic Church</title>
+	</head>
+
+
+	<body>
+		<div class="page_cont"> <!-- PAGE CONTAINER -->
+			<div class="row">
+				<center>
+					<br><BR>
+					<img src="/images_church/holyspiritlogo01.png">
+					<img src="/images_church/holyspiritlogo02_spanish.png">
+					<br><br>
+				</center>
+			</div>
+
+			<div class="row">
+				<div class="column1">
+					<div class="welcome_cont">
+						<br>
+						<h2>Calendar</h2> 
+						<br>
+					</div>
+					<div class="news_cont">
+						<center>
+							<h2>
+							<br> 
+								<script type="text/javascript">
+									tday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+									tmonth=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+									function GetClock(){
+										var d=new Date();
+										var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getFullYear();
+										var nhour=d.getHours(),nmin=d.getMinutes(),ap;
+										if(nhour==0){ap=" AM";nhour=12;}
+										else if(nhour<12){ap=" AM";}
+										else if(nhour==12){ap=" PM";}
+										else if(nhour>12){ap=" PM";nhour-=12;}
+										if(nmin<=9) nmin="0"+nmin;
+											document.getElementById('clockbox').innerHTML=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+" "+nhour+":"+nmin+ap+"";
+													} 
+											window.onload=function(){
+											GetClock();
+											setInterval(GetClock,1000);
+											}
+								</script> 
+
+								<div id="clockbox"></div> 
+								<br>
+							</h2>
+						</center>
+						<div style="margin-left:0; pading-left:0">
+							<iframe src="https://broadcast.acstechnologies.com/Display/RunAnon/Office?sn=307604" style="border-width:0" width="100%" height="700" frameborder="0" scrolling="no"></iframe>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="column2"> <!-- PAGE COlUMN B for image -->
+					<div class="welcome_cont">
+						<br>
+						<h2><!-- optional title --></h2> 
+						<br>
+					</div>
+
+					<div class="img_cont"><!--- Beginning of photo IFRAME -->
+						<div class="intrinsic-container intrinsic-container-16x9">
+							<iframe src="/photomonitor/slideshow.html" allowfullscreen scrolling="no"></iframe>
+					 	</div> 
+
+					</div>
+			</div>
+			<div class="footer">
+				<center>
+					<table border="0">
+						<tr>
+							<td><img src="/images_church/icons/twitterbanner2.png" height=""></td><td><img src="/images_church/icons/facebookbanner2.png" height="">
+							</td>   
+						</tr>
+					</table>
+				</center>
+
+			</div>
+		</div>
+
+
+	</body>
+</html>
